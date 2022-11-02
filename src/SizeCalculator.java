@@ -42,6 +42,7 @@ public class SizeCalculator {
     // TODO: метод правильной печати размеров: 24B, 234K, 36M, 34G, 42T в байтах
     // 235K => 240640
     public static long getSizeFromHumanReadable(String size) {
+
         long value = 0;
         if (size.contains("B")) {
             value = Integer.parseInt(size.replaceAll("[^0-9]", ""));

@@ -1,4 +1,5 @@
 import java.io.File;
+import java.util.Objects;
 
 public class ParametersBag {
 
@@ -15,9 +16,9 @@ public class ParametersBag {
         path = "";
         // движемся по аргументам парами
         for (int i = 0; i < 4; i = i + 2) {
-            if (args[i] == "-l") {
+            if (Objects.equals(args[i], "-l")) {
                 limit = SizeCalculator.getSizeFromHumanReadable(args[i + 1]); // устанавливаем лимит
-            } else if (args[i] == "-d") {
+            } else if (Objects.equals(args[i], "-d")) {
                 path = args[i + 1];  // устанавливаем путь
             }
         }

@@ -6,11 +6,9 @@ public class Main {
     public static void main(String[] args) {
 
         ParametersBag bag = new ParametersBag(args);
+
         String folderPath = bag.getPath(); // путь получаем из соответствующего класса
         long sizeLimit = bag.getLimit();   // лимит из соответствующего класса
-
-//      String folderPath = "D:/SAVCHUK";
-//      long sizeLimit = 50 * 1024 * 1024; // лимит файлов для вывода в консоль
 
         File file = new File(folderPath);
         Node root = new Node(file, sizeLimit); // содержит все дерево всех папок и передаем в ноду лимит
